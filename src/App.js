@@ -13,7 +13,7 @@ function App() {
       const preloader = document.querySelector('.container');
       preloader.classList.add('hidden');
       setTimeout(() => {
-        preloader.classList.add('hiddenAll');
+        preloader.style.display = 'none';
       }, 2000);
     });
   }, [])
