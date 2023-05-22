@@ -1,0 +1,188 @@
+.center,
+.errorStyle {
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 0.5%;
+}
+
+.crd {
+  color: #000000b1;
+}
+
+.center input,
+.errorStyle input {
+  position: relative;
+  width: 16rem;
+  height: 3rem;
+  border: 1px solid #111;
+  background: transparent;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1.4rem;
+  transition: 0.5s;
+  color: #000000;
+  box-shadow: 0.7px 0.7px 0.5px rgba(0, 0, 0, 0.36);
+}
+
+.errorStyle input {
+  border: 1px solid #c22222;
+}
+
+.center label,
+.errorStyle label {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #000000b1;
+  transition: 0.5s;
+  cursor: text;
+  right: 15rem;
+  top: 0.5rem;
+  height: 1rem;
+}
+
+.errorStyle label {
+  color: #c22222;
+}
+
+#fill {
+  font-size: 1rem;
+  background-color: rgb(251, 251, 251);
+  transform: translateY(-1.2rem) translateX(-0.2rem);
+}
+
+.center input:focus ~ label,
+.errorStyle input:focus ~ label {
+  font-size: 1rem;
+  color: #37b92b;
+  background-color: rgb(251, 251, 251);
+  transform: translateY(-1.2rem) translateX(-0.2rem);
+}
+
+.center input:focus,
+.errorStyle input:focus {
+  border: 1px solid #37b92b;
+}
+
+.p {
+  margin-top: 0.8%;
+  color: #c22222;
+}
+
+@media all and (max-width: 1320px) {
+  .center input,
+  .errorStyle input {
+    width: 15rem;
+    height: 2.6rem;
+    font-size: 1.3rem;
+  }
+
+  .center label,
+  .errorStyle label {
+    font-size: 1.3rem;
+    right: 14.2rem;
+    top: 0.5rem;
+    height: 1rem;
+  }
+
+  #fill {
+    transform: translateY(-1.2rem) translateX(-0.2rem);
+  }
+
+  .center input:focus ~ label,
+  .errorStyle input:focus ~ label {
+    transform: translateY(-1.2rem) translateX(-0.2rem);
+  }
+
+  .p {
+    margin-top: 0.9%;
+  }
+}
+
+@media all and (max-width: 908px) {
+  .center input,
+  .errorStyle input {
+    width: 13rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+  }
+
+  .center label,
+  .errorStyle label {
+    font-size: 1.1rem;
+    right: 12.3rem;
+    top: 0.5rem;
+    height: 1rem;
+  }
+  .p {
+    font-size: 0.9rem;
+  }
+}
+
+@media all and (max-width: 728px) {
+  .center,
+  .errorStyle {
+    margin-top: 5%;
+    margin-bottom: 0.5%;
+  }
+
+  .center input,
+  .errorStyle input {
+    width: 11rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .center label,
+  .errorStyle label {
+    font-size: 1rem;
+    right: 10.4rem;
+    top: 0.3rem;
+    height: 1rem;
+  }
+  .p {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .p,
+  .crd {
+    margin-top: -6%;
+  }
+}
+@media all and (max-width: 500px) {
+  .p,
+  .crd {
+    margin-top: -7%;
+  }
+}
+
+@media all and (max-width: 426px) {
+  .p,
+  .crd {
+    margin-bottom: 6%;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .p,
+  .crd {
+    margin-top: -9%;
+  }
+}
+@media all and (max-width: 320px) {
+  .p,
+  .crd {
+    margin-top: -12%;
+  }
+}
+@media all and (max-width: 290px) {
+  .p,
+  .crd {
+    margin-top: -13%;
+  }
+}

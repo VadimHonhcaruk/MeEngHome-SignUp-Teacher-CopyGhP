@@ -1,0 +1,66 @@
+.check {
+  font-size: 1.34rem;
+}
+
+.customCheckbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.customCheckbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  letter-spacing: 0.05rem;
+}
+.customCheckbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #000000;
+  border-radius: 0.05em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.customCheckbox:checked + label::before {
+  border-color: #000000;
+  background-color: #ddf8d2;
+  background-image: url("../../images/check.png");
+}
+
+.hypertext:link,
+.hypertext:visited,
+.hypertext {
+  color: #000000;
+}
+
+@media all and (max-width: 1350px) {
+  .check {
+    font-size: 1.1rem;
+  }
+}
+
+@media all and (max-width: 840px) {
+  .check {
+    font-size: 1rem;
+  }
+
+  .customCheckbox + label::before {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .check {
+    margin-top: 5%;
+    font-size: 1.1rem;
+  }
+}

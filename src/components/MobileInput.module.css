@@ -1,0 +1,142 @@
+.errorStyleMobile input,
+.inputBoxMobile input {
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #111;
+  background: transparent;
+  padding: 3px;
+  padding-left: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  color: #000000;
+  box-shadow: 0.7px 0.7px 0.5px rgba(0, 0, 0, 0.36);
+  margin-top: 5%;
+}
+
+.errorStyleMobile input {
+  border: 1px solid #c22222;
+}
+
+.inputBoxMobile label,
+.errorStyleMobile label {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #000000b1;
+  transition: 0.5s;
+  cursor: text;
+}
+
+.errorStyleMobile label {
+  color: #c22222;
+}
+
+#fillMobile,
+#fillMobileS {
+  font-size: 1rem;
+  background-color: white;
+  transform: translateY(-1rem) translateX(-0.2rem);
+}
+
+#fillMobileS {
+  transform: translateY(-1.4rem) translateX(-0.2rem);
+}
+
+.inputBoxMobile input:focus ~ .fir,
+.inputBoxMobile input:focus ~ .fin,
+.errorStyleMobile input:focus ~ .fir,
+.errorStyleMobile input:focus ~ .fin {
+  font-size: 1rem;
+  color: #37b92b;
+  background-color: white;
+  transform: translateY(-1rem) translateX(-0.2rem);
+}
+
+.inputBoxMobile input:focus ~ .fir,
+.errorStyleMobile input:focus ~ .fir {
+  transform: translateY(-1.4rem) translateX(-0.2rem);
+}
+
+.inputBoxMobile input:focus,
+.errorStyleMobile input:focus {
+  border: 1px solid #37b92b;
+}
+
+.fin {
+  bottom: 2.2rem;
+  left: 2rem;
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fir {
+  right: 83%;
+  bottom: 0rem;
+}
+
+.phone {
+  bottom: 2.2rem;
+  left: 2rem;
+}
+
+@media all and (max-width: 528px) {
+  .fir {
+    right: 82%;
+  }
+}
+
+@media all and (max-width: 452px) {
+  .fir {
+    right: 81%;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .fin {
+    left: 1.7rem;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .fin {
+    left: 1.5rem;
+  }
+}
+
+@media all and (max-width: 270px) {
+  .fin {
+    left: 1.3rem;
+  }
+}
+
+@media all and (max-width: 230px) {
+  .fin {
+    left: 1rem;
+  }
+}
+
+@media all and (max-width: 426px) {
+  .errorStyleMobile input,
+  .inputBoxMobile input {
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 0%;
+  }
+
+  .fir {
+    left: 10%;
+    bottom: 2.2rem;
+    height: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputBoxMobile input:focus ~ .fir,
+  .errorStyleMobile input:focus ~ .fir,
+  #fillMobileS {
+    transform: translateY(-1rem) translateX(-0.2rem);
+  }
+}

@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Blogger Sans";
+  src: url("../src/fonts/Blogger_Sans.otf");
+}
+
+@font-face {
+  font-family: "Blogger Sans Bold";
+  src: url("../src/fonts/Blogger_Sans_Bold.otf");
+}
+
+@font-face {
+  font-family: "Aqum";
+  src: url("../src/fonts/Aqum.otf");
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: Blogger Sans;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 51vw;
+  height: 63vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(90.15deg, #3ecf30 0%, #7df0ce 100%);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.AppMobile {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media all and (max-width: 1640px) {
+  .App {
+    width: 55vw;
+    height: 64vh;
+  }
+}
+
+@media all and (max-width: 1520px) {
+  .App {
+    width: 62vw;
+    height: 64vh;
+  }
+}
+
+@media all and (max-width: 1168px) {
+  .App {
+    width: 72vw;
+  }
+}
+
+@media all and (max-width: 982px) {
+  .App {
+    width: 76vw;
+    height: 70vh;
+  }
+}
+
+@media all and (max-height: 800px) {
+  .App {
+    height: 75vh;
+  }
+}
+
+@media all and (max-height: 740px) {
+  .App {
+    height: 80vh;
+  }
+}
+
+@media all and (max-height: 690px) {
+  .App {
+    height: 85vh;
+  }
+}

@@ -1,0 +1,237 @@
+.center,
+.errorStyle {
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+
+.phn {
+  color: #3ecf30;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2% 1%;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+
+.phn:hover {
+  background-color: #edf9ed;
+}
+
+.center input,
+.errorStyle input {
+  position: relative;
+  width: 17rem;
+  height: 3rem;
+  border: 1px solid #111;
+  background: transparent;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1.4rem;
+  transition: 0.5s;
+  color: #000000;
+  box-shadow: 0.7px 0.7px 0.5px rgba(0, 0, 0, 0.36);
+}
+
+.errorStyle input {
+  border: 1px solid #c22222;
+}
+
+.center label,
+.errorStyle label {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #000000b1;
+  transition: 0.5s;
+  cursor: text;
+  right: 16rem;
+  top: 0.5rem;
+  height: 1rem;
+}
+
+.errorStyle label {
+  color: #c22222;
+}
+
+#fill {
+  font-size: 1rem;
+  background-color: rgb(251, 251, 251);
+  transform: translateY(-1.2rem) translateX(-0.2rem);
+}
+
+.center input:focus ~ label,
+.errorStyle input:focus ~ label {
+  font-size: 1rem;
+  color: #37b92b;
+  background-color: rgb(251, 251, 251);
+  transform: translateY(-1.2rem) translateX(-0.2rem);
+}
+
+.center input:focus,
+.errorStyle input:focus {
+  border: 1px solid #37b92b;
+}
+
+.p {
+  color: #c22222;
+  margin-top: -1.1%;
+  font-size: 1.08rem;
+}
+
+.mail {
+  color: #000000b1;
+}
+
+@media all and (max-width: 1320px) {
+  .p {
+    margin-top: -1%;
+  }
+
+  .center input,
+  .errorStyle input {
+    width: 15rem;
+    height: 2.6rem;
+    font-size: 1.3rem;
+  }
+
+  .center label,
+  .errorStyle label {
+    font-size: 1.3rem;
+    right: 14.2rem;
+  }
+}
+
+@media all and (max-width: 908px) {
+  .p {
+    margin-top: -1%;
+  }
+
+  .center input,
+  .errorStyle input {
+    width: 13rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+  }
+
+  .center label,
+  .errorStyle label {
+    font-size: 1.1rem;
+    right: 12.2rem;
+    top: 0.3rem;
+  }
+
+  #fill {
+    transform: translateY(-1rem) translateX(-0.2rem);
+  }
+
+  .center input:focus ~ label,
+  .errorStyle input:focus ~ label {
+    transform: translateY(-1rem) translateX(-0.2rem);
+  }
+
+  .p {
+    font-size: 0.9rem;
+  }
+
+  .phn {
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 728px) {
+  .p {
+    margin-top: -1%;
+    font-size: 0.8rem;
+  }
+
+  .center input,
+  .errorStyle input {
+    width: 11rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .center label,
+  .errorStyle label {
+    font-size: 1rem;
+    right: 10.3rem;
+    top: 0.3rem;
+  }
+
+  #fill {
+    font-size: 0.8rem;
+    transform: translateY(-0.8rem) translateX(-0.2rem);
+  }
+
+  .center input:focus ~ label,
+  .errorStyle input:focus ~ label {
+    font-size: 0.8rem;
+    transform: translateY(-0.8rem) translateX(-0.2rem);
+  }
+
+  .phn {
+    font-size: 0.7rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .p {
+    margin-top: -6%;
+  }
+
+  .phn {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .p {
+    margin-top: -7%;
+  }
+}
+
+@media all and (max-width: 426px) {
+  .p {
+    margin-bottom: 6%;
+  }
+
+  .phn {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .p {
+    margin-top: -9%;
+  }
+}
+@media all and (max-width: 320px) {
+  .p {
+    margin-top: -12%;
+  }
+
+  .phn {
+    font-size: 0.6rem;
+  }
+}
+@media all and (max-width: 290px) {
+  .p {
+    margin-top: -13%;
+    margin-bottom: 14%;
+  }
+}
+
+@media all and (max-width: 240px) {
+  .p {
+    margin-bottom: 17%;
+  }
+}
+
+@media all and (max-width: 200px) {
+  .p {
+    margin-bottom: 20%;
+  }
+}
