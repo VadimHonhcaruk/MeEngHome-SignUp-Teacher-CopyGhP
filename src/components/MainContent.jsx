@@ -19,7 +19,7 @@ export const MainContent = ({ isMobile }) => {
     const [isValideDate, setIsValideDate] = useState(true);
     const [phone, setPhone] = useState('');
     const [page, setPage] = useState(1);
-    const [pageMobile, setPageMobile] = useState(4);
+    const [pageMobile, setPageMobile] = useState(1);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordCheck, setPasswordCheck] = useState('');

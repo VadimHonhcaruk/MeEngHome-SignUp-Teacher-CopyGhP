@@ -9,13 +9,11 @@ function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
   useEffect(() => {
-    window.addEventListener('load', () => {
-      const preloader = document.querySelector('.container');
-      preloader.classList.add('hidden');
-      setTimeout(() => {
-        preloader.classList.add('hiddenAll');
-      }, 2000);
-    });
+    const preloader = document.querySelector('.container');
+    preloader.classList.add('hidden');
+    setTimeout(() => {
+      preloader.classList.add('hiddenAll');
+    }, 2000);
   }, [])
 
   if (isMobile) {

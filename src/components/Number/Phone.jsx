@@ -28,7 +28,7 @@ export const Phone = ({ isMobile, phone, setPhone, register, errors, clearErrors
     </> : <>
         <div className={errors?.phone ? m.errorStyleMobile : m.inputBoxMobile}>
             <input id='phone' onFocus={(e) => onfocusInput(e, setPhone)} onInput={inputChange} {...register("phone", { onChange: (e) => { setPhone(e.target.value); }, required: { value: true, message: "Заповніть поле" }, pattern: { value: /^\+38\s\(0\d{2}\)\s\d{3}\s\d{2}\s\d{2}$/, message: `Поле має бути у форматі: +380XXXXXXXXX` } })} value={phone} type="tel" name="phone" maxLength="19" />
-            <label htmlFor="phone" className={m.fin} id={phone !== '' ? m.fillMobile : undefined}>Номер телефону</label>
+            <label inputmode="tel" htmlFor="phone" className={m.fin} id={phone !== '' ? m.fillMobile : undefined}>Номер телефону</label>
         </div>
         <p className={c.p}>{(errors?.phone) ? <span><Error />&nbsp;&nbsp;{errors?.phone?.message}</span> : queryPhone && <span className={c.phn} onClick={() => { setPhone(queryPhone); clearErrors('phone'); }}>Вставити {queryPhone}, як номер телефону</span>}</p>
     </>

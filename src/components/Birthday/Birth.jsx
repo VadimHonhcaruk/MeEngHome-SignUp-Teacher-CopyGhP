@@ -9,7 +9,7 @@ export const Birth = ({ isMobile, day, setDay, month, setMonth, year, setYear, a
             <span className={c.title}>Дата народження</span>
             <div className={c.center}>
                 <div className={errors?.day ? c.errorStyle : c.inputBox}>
-                    <input id="day" value={day} onInput={onlyNumb} inputmode="tel" {...register("day", { onChange: (e) => { setDay(e.target.value); }, required: "Заповніть поле", pattern: { value: /^(0?[1-9]|[12]\d|3[01])$/, message: "Поле може містити тільки цифри від 1 до 31" }, })} name="day" maxLength="2" />
+                    <input id="day" value={day} onInput={onlyNumb} inputmode="numeric" {...register("day", { onChange: (e) => { setDay(e.target.value); }, required: "Заповніть поле", pattern: { value: /^(0?[1-9]|[12]\d|3[01])$/, message: "Поле може містити тільки цифри від 1 до 31" }, })} name="day" maxLength="2" />
                     <label htmlFor="day" className={c.day} id={day !== '' ? c.fill : undefined}>День</label>
                 </div>
                 <div className={errors?.month ? c.errorStyle : c.inputBox}>

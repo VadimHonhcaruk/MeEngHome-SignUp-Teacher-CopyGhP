@@ -38,7 +38,7 @@ export const Card = ({ card, setCard, errorCard, setCardError, isMobile, setErro
         {errorCard || errors?.card?.message ? <p className={c.p}><Error />&nbsp;&nbsp;Неправильний номер карти</p> : <span className={c.crd}>Карта для переказу коштів за надані послуги</span>}
     </> : <>
         <div className={errorCard ? m.errorStyleMobile : m.inputBoxMobile}>
-            <input id='card' onInput={cardInputChange}{...register("card", { onBlur: validateCardNumber, onChange: (e) => { setCard(e.target.value); } },)} value={card} type="text" name="card" maxLength="19" />
+            <input inputmode="numeric" id='card' onInput={cardInputChange}{...register("card", { onBlur: validateCardNumber, onChange: (e) => { setCard(e.target.value); } },)} value={card} type="text" name="card" maxLength="19" />
             <label htmlFor="card" className={m.fin} id={card !== '' ? m.fillMobile : undefined}>Банківська карта</label>
         </div>
         {errorCard || errors?.card ? <p className={c.p}><Error />&nbsp;&nbsp;Неправильний номер карти</p> : <p className={c.crd}>Карта для переказу коштів за надані послуги</p>}
