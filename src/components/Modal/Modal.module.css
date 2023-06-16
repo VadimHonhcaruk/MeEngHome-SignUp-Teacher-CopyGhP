@@ -127,4 +127,14 @@
     width: 100%;
     height: 100%;
   }
+
+  .image {
+    width: 26vw;
+    margin-top: 6vh;
+  }
+
+  .imageTrouble {
+    width: 30vw;
+    margin-top: 2vh;
+  }
 }

@@ -28,6 +28,7 @@
   text-align: center;
   transition: 0.5s;
   box-shadow: 0.7px 0.7px 0.5px rgba(0, 0, 0, 0.36);
+  background-color: rgb(255, 255, 255);
 }
 
 .inputBox select {
@@ -59,7 +60,8 @@
   width: 2.1rem;
 }
 
-#fill {
+#fill,
+#fillY {
   font-size: 1rem;
   background-color: rgb(251, 251, 251);
   transform: translateY(-1.7rem) translateX(-0.2rem);
@@ -161,7 +163,8 @@
     width: 2.1rem;
   }
 
-  #fill {
+  #fill,
+  #fillY {
     transform: translateY(-1.4rem) translateX(0);
   }
 
@@ -233,7 +236,8 @@
     width: 2.1rem;
   }
 
-  #fill {
+  #fill,
+  #fillY {
     transform: translateY(-1.15rem) translateX(0);
   }
 
@@ -319,7 +323,8 @@
     bottom: 1.7rem;
   }
 
-  #fill {
+  #fill,
+  #fillY {
     font-size: 0.8rem;
     transform: translateY(-1rem) translateX(0);
   }
@@ -391,18 +396,22 @@
     left: -5rem;
   }
 
-  #fill {
+  #fill,
+  #fillY {
     transform: translateY(-1.3rem) translateX(0);
+    background-color: rgb(255, 255, 255);
   }
 
   .inputBox input:focus ~ label,
   .inputBox select:focus ~ label {
     transform: translateY(-1.3rem) translateX(0);
+    background-color: rgb(255, 255, 255);
   }
 
   .errorStyle input:focus ~ label,
   .errorStyle select:focus ~ label {
     transform: translateY(-1.3rem) translateX(0);
+    background-color: rgb(255, 255, 255);
   }
 
   .errorStyle input,
@@ -469,12 +478,7 @@
 }
 
 @media all and (max-width: 438px) {
-  .title {
-    font-size: 1.2rem;
-  }
-
-  .inputBox input,
-  .inputBox select {
+  .inputBox input {
     width: 4.5rem;
   }
 
@@ -497,7 +501,7 @@
 
   .inputBox select,
   .errorStyle select {
-    width: 5.5rem;
+    width: 6.5rem;
   }
 
   .inputBox label,
@@ -506,12 +510,27 @@
   }
 }
 
+@media all and (max-width: 398px) {
+  .month {
+    left: 0.5rem;
+    bottom: 1.9rem;
+  }
+
+  .day {
+    left: 0.5rem;
+    bottom: 1.9rem;
+  }
+}
+
 @media all and (max-width: 390px) {
   .inputBox select,
   .errorStyle select {
     width: 8rem;
   }
-
+  .inputBox,
+  .errorStyle {
+    height: 3.4rem;
+  }
   .month {
     left: 0.5rem;
     bottom: 2.1rem;
@@ -522,25 +541,35 @@
     bottom: 2.1rem;
   }
 
+  #fill {
+    transform: translateY(-1.1rem) translateX(0);
+  }
+
+  .inputBox input:focus ~ .day,
+  .inputBox select:focus ~ .month {
+    transform: translateY(-1.1rem) translateX(0);
+  }
+
+  .errorStyle input:focus ~ .day,
+  .errorStyle select:focus ~ .month {
+    transform: translateY(-1.1rem) translateX(0);
+  }
+
   .p {
-    margin-top: -5%;
-    margin-bottom: 4%;
-    height: 1rem;
+    margin-top: -2%;
+    margin-bottom: 3%;
+    height: 2rem;
   }
 }
 
-@media all and (max-width: 387px) {
+@media all and (max-width: 388px) {
   .year {
     right: 0rem;
-    bottom: 2.1rem;
+    bottom: 1.9rem;
   }
 }
 
 @media all and (max-width: 360px) {
-  .title {
-    font-size: 1.1rem;
-  }
-
   .inputBox input,
   .inputBox select {
     width: 5rem;
@@ -567,24 +596,42 @@
     font-size: 1.1rem;
   }
 
-  .inputBox input,
-  .inputBox select {
+  .inputBox input {
     width: 4rem;
   }
 
-  .errorStyle input,
-  .errorStyle select {
+  .errorStyle input {
     width: 4rem;
   }
 
   .inputBox select,
   .errorStyle select {
-    width: 5rem;
+    width: 6rem;
   }
 
   .inputBox label,
   .errorStyle label {
     font-size: 1.1rem;
+  }
+}
+
+@media all and (max-width: 287px) {
+  .inputBox input {
+    width: 3.5rem;
+  }
+
+  .errorStyle input {
+    width: 3.5rem;
+  }
+
+  .inputBox select,
+  .errorStyle select {
+    width: 5.5rem;
+  }
+
+  .inputBox label,
+  .errorStyle label {
+    font-size: 1rem;
   }
 }
 
@@ -599,26 +646,11 @@
 
   .inputBox select,
   .errorStyle select {
-    width: 4rem;
+    width: 5.5rem;
   }
 
   .inputBox label,
   .errorStyle label {
     font-size: 1rem;
-  }
-
-  .year {
-    left: 0.7rem;
-    bottom: 1.9rem;
-  }
-
-  .month {
-    left: 0.7rem;
-    bottom: 1.9rem;
-  }
-
-  .day {
-    left: 0.7rem;
-    bottom: 1.9rem;
   }
 }

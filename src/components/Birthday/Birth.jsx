@@ -9,7 +9,7 @@ export const Birth = ({ isMobile, day, setDay, month, setMonth, year, setYear, a
             <span className={c.title}>Дата народження</span>
             <div className={c.center}>
                 <div className={errors?.day ? c.errorStyle : c.inputBox}>
-                    <input id="day" value={day} onInput={onlyNumb} {...register("day", { onChange: (e) => { setDay(e.target.value); }, required: "Заповніть поле", pattern: { value: /^(0?[1-9]|[12]\d|3[01])$/, message: "Поле може містити тільки цифри від 1 до 31" }, })} name="day" maxLength="2" />
+                    <input id="day" value={day} onInput={onlyNumb} inputmode="tel" {...register("day", { onChange: (e) => { setDay(e.target.value); }, required: "Заповніть поле", pattern: { value: /^(0?[1-9]|[12]\d|3[01])$/, message: "Поле може містити тільки цифри від 1 до 31" }, })} name="day" maxLength="2" />
                     <label htmlFor="day" className={c.day} id={day !== '' ? c.fill : undefined}>День</label>
                 </div>
                 <div className={errors?.month ? c.errorStyle : c.inputBox}>
@@ -31,8 +31,8 @@ export const Birth = ({ isMobile, day, setDay, month, setMonth, year, setYear, a
                     <label htmlFor="month" className={c.month} id={month !== '' ? c.fill : undefined}>Місяць</label>
                 </div>
                 <div className={errors?.year ? c.errorStyle : c.inputBox}>
-                    <input id="year" className={c.marg} value={year} onInput={onlyNumb} {...register("year", { onChange: (e) => { setYear(e.target.value); }, required: "Заповніть поле", pattern: { value: /^\d{4}$/, message: `Поле може містити значення від ${now.getFullYear() - 100} до ${now.getFullYear() - 15}` }, min: { value: now.getFullYear() - 100, message: `Поле може містити значення від ${now.getFullYear() - 100} до ${now.getFullYear() - 15}` }, max: { value: now.getFullYear() - 5, message: `Поле може містити значення від ${now.getFullYear() - 100} до ${now.getFullYear() - 15}` } })} name="year" maxLength="4" />
-                    <label htmlFor="year" className={c.year} id={year !== '' ? c.fill : undefined}>Рік</label>
+                    <input inputmode="numeric" id="year" className={c.marg} value={year} onInput={onlyNumb} {...register("year", { onChange: (e) => { setYear(e.target.value); }, required: "Заповніть поле", pattern: { value: /^\d{4}$/, message: `Поле може містити значення від ${now.getFullYear() - 100} до ${now.getFullYear() - 15}` }, min: { value: now.getFullYear() - 100, message: `Поле може містити значення від ${now.getFullYear() - 100} до ${now.getFullYear() - 15}` }, max: { value: now.getFullYear() - 5, message: `Поле може містити значення від ${now.getFullYear() - 100} до ${now.getFullYear() - 15}` } })} name="year" maxLength="4" />
+                    <label htmlFor="year" className={c.year} id={year !== '' ? c.fillY : undefined}>Рік</label>
                 </div>
             </div>
             <p className={c.p}>{(errors?.year || errors?.day || errors?.month || !isValideDate || ageUnderEi) ? <Error /> : null}&nbsp;&nbsp;{errors?.year?.message || errors?.day?.message || errors?.month?.message || (!isValideDate && "Такої дати не існує") || (ageUnderEi && 'Вам повинно бути мінімум 15 років')}</p>

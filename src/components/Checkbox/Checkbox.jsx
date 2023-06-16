@@ -17,7 +17,7 @@ export const CheckboxInputs = ({ isMobile, register }) => {
             <>
                 <div className={c.check}>
                     <input className={c.customCheckbox} id="contract" name="contract" type="checkbox" {...register("contract", { required: true })} />
-                    <label htmlFor="contract"><p>Я погоджуюсь з умовами&nbsp;<a className={c.hypertext} target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1DFVQbG8q6yzFIINMsRxaq6BhFjfQdl98/view">договору про співпрацю</a>з студією “My English Home”</p></label>
+                    <label htmlFor="contract"><p>Я погоджуюсь з умовами&nbsp;<a className={c.hypertext} target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1DFVQbG8q6yzFIINMsRxaq6BhFjfQdl98/view">договору про співпрацю</a> з студією “My English Home”</p></label>
                 </div>
                 <div className={c.check}>
                     <input className={c.customCheckbox} id="behavior" name="behavior" type="checkbox" {...register("behavior", { required: true })} />

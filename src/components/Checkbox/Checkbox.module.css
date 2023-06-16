@@ -12,7 +12,6 @@
   display: inline-flex;
   align-items: center;
   user-select: none;
-  letter-spacing: 0.05rem;
 }
 .customCheckbox + label::before {
   content: "";
@@ -27,6 +26,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+  margin-bottom: 1rem;
 }
 
 .customCheckbox:checked + label::before {
@@ -61,6 +61,7 @@
 @media all and (max-width: 600px) {
   .check {
     margin-top: 5%;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
   }
 }

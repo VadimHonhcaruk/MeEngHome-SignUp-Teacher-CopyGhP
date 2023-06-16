@@ -19,7 +19,7 @@ export const MainContent = ({ isMobile }) => {
     const [isValideDate, setIsValideDate] = useState(true);
     const [phone, setPhone] = useState('');
     const [page, setPage] = useState(1);
-    const [pageMobile, setPageMobile] = useState(1);
+    const [pageMobile, setPageMobile] = useState(4);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordCheck, setPasswordCheck] = useState('');
@@ -153,7 +153,7 @@ export const MainContent = ({ isMobile }) => {
                         {pageMobile === 1 && <FirstPage isMobile={isMobile} phone={phone} setPhone={setPhone} ageUnderEi={ageUnderEi} isValideDate={isValideDate} now={now} clearErrors={clearErrors} watch={watch} setError={setError} register={register} errors={errors} day={day} setDay={setDay} month={month} setMonth={setMonth} year={year} setYear={setYear} firstName={firstName} setFirstName={setFirstName} setSecondName={setSecondName} secondName={secondName} card={card} setCard={setCard} />}
                         {pageMobile === 2 && <ThirdPage isMobile={isMobile} errorCard={errorCard} card={card} setCard={setCard} setCardError={setCardError} phone={phone} setPhone={setPhone} clearErrors={clearErrors} setError={setError} register={register} errors={errors} />}
                         {pageMobile === 3 && <SecondPage isMobile={isMobile} passwordCheck={passwordCheck} setPasswordCheck={setPasswordCheck} password={password} setPassword={setPassword} email={email} setEmail={setEmail} register={register} errors={errors} setError={setError} clearErrors={clearErrors} />}
-                        {pageMobile === 4 && <div><h3 className={c.h3}>Обов'язково ознайомтесь</h3><CheckboxInputs isMobile={isMobile} register={register} /></div>}
+                        {pageMobile === 4 && <div ><h3 className={c.h3}>Обов'язково ознайомтесь</h3><CheckboxInputs isMobile={isMobile} register={register} /></div>}
                     </div>
                     {pageMobile === 1 && <div className={c.buttCont}><div className={c.buttBackINVIS}>Назад</div><button className={c.btnGrad} onClick={() => { if (ageUnderEi || errors?.firstName || errors?.secondName || errors?.day || errors?.month || errors?.year || !isValideDate || watch('firstName') === '' || watch('secondName') === '' || watch('day') === '' || watch('month') === '' || watch('year') === '') { return } else { setPageMobile(2) } }}>Далі</button></div>}{/*onClick={mobileOnClick}*/}
                     {pageMobile === 2 && <div className={c.buttContReg}>

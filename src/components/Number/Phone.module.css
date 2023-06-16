@@ -36,6 +36,7 @@
   transition: 0.5s;
   color: #000000;
   box-shadow: 0.7px 0.7px 0.5px rgba(0, 0, 0, 0.36);
+  background-color: rgb(255, 255, 255);
 }
 
 .errorStyle input {
@@ -178,37 +179,57 @@
 
 @media all and (max-width: 600px) {
   .p {
-    margin-top: -6%;
+    margin-top: -4%;
   }
 
   .phn {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: #edf9ed;
   }
 }
 @media all and (max-width: 500px) {
   .p {
-    margin-top: -7%;
+    margin-top: -6%;
+    margin-bottom: 5%;
   }
 }
 
 @media all and (max-width: 426px) {
   .p {
-    margin-bottom: 6%;
+    margin-bottom: 9%;
   }
 
   .phn {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
 @media all and (max-width: 420px) {
   .p {
-    margin-top: -9%;
+    margin-top: -7%;
   }
 }
+
+@media all and (max-width: 390px) {
+  .p {
+    margin-top: -7%;
+    margin-bottom: 6%;
+  }
+  .phn {
+    letter-spacing: 0;
+  }
+}
+
+@media all and (max-width: 364px) {
+  .phn {
+    font-size: 0.8rem;
+  }
+}
+
 @media all and (max-width: 320px) {
   .p {
-    margin-top: -12%;
+    margin-top: -9%;
   }
 
   .phn {
@@ -217,8 +238,8 @@
 }
 @media all and (max-width: 290px) {
   .p {
-    margin-top: -13%;
-    margin-bottom: 14%;
+    margin-top: -11%;
+    margin-bottom: 11%;
   }
 }
 

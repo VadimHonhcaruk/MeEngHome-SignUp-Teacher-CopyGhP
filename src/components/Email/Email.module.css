@@ -34,6 +34,7 @@
   transition: 0.5s;
   color: #000000;
   box-shadow: 0.7px 0.7px 0.5px rgba(0, 0, 0, 0.36);
+  background-color: rgb(255, 255, 255);
 }
 
 .errorStyle input {
@@ -185,6 +186,10 @@
 
   .phn {
     font-size: 1rem;
+  }
+
+  .mail {
+    font-size: 0.9rem;
   }
 }
 @media all and (max-width: 500px) {
