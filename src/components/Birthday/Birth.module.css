@@ -387,7 +387,7 @@
   .month {
     bottom: 0rem;
     width: 2.3rem;
-    left: -7rem;
+    left: -8rem;
   }
 
   .day {
@@ -422,20 +422,37 @@
 
   .inputBox select,
   .errorStyle select {
-    width: 8rem;
+    width: 9rem;
     height: 2.5rem;
   }
 
   .p {
     font-size: 0.8rem;
     margin-top: 1.5%;
-    margin-bottom: 4%;
     height: 1rem;
   }
 
   .inputBox label,
   .errorStyle label {
     font-size: 1.4rem;
+  }
+}
+
+@media all and (max-width: 512px) {
+  .month {
+    bottom: 2.3rem;
+    width: 2.3rem;
+    left: 1rem;
+  }
+
+  .day {
+    width: 1.7rem;
+    bottom: 2.3rem;
+    left: 1rem;
+  }
+
+  .p {
+    margin-top: -5%;
   }
 }
 
@@ -454,10 +471,12 @@
   }
 
   .month {
-    left: -6.2rem;
+    bottom: 0;
+    left: -7.2rem;
   }
 
   .day {
+    bottom: 0;
     left: -4.7rem;
   }
 
@@ -468,12 +487,34 @@
 
   .inputBox select,
   .errorStyle select {
-    width: 7rem;
+    width: 8rem;
   }
 
   .inputBox label,
   .errorStyle label {
     font-size: 1.3rem;
+  }
+
+  .p {
+    margin-top: 1%;
+  }
+}
+
+@media all and (max-width: 454px) {
+  .month {
+    bottom: 2.3rem;
+    width: 2.3rem;
+    left: 1rem;
+  }
+
+  .day {
+    width: 1.7rem;
+    bottom: 2.3rem;
+    left: 1rem;
+  }
+
+  .p {
+    margin-top: -5%;
   }
 }
 
@@ -484,10 +525,6 @@
 
   .year {
     right: 4rem;
-  }
-
-  .month {
-    left: -5rem;
   }
 
   .day {
@@ -508,6 +545,21 @@
   .errorStyle label {
     font-size: 1.2rem;
   }
+
+  .month {
+    bottom: 0rem;
+    width: 2.3rem;
+    left: -6rem;
+  }
+
+  .day {
+    width: 1.7rem;
+    bottom: 0rem;
+  }
+
+  .p {
+    margin-top: 2%;
+  }
 }
 
 @media all and (max-width: 398px) {
@@ -519,6 +571,10 @@
   .day {
     left: 0.5rem;
     bottom: 1.9rem;
+  }
+
+  .p {
+    margin-top: -5%;
   }
 }
 
@@ -557,8 +613,6 @@
 
   .p {
     margin-top: -2%;
-    margin-bottom: 3%;
-    height: 2rem;
   }
 }
 
@@ -572,22 +626,34 @@
 @media all and (max-width: 360px) {
   .inputBox input,
   .inputBox select {
-    width: 5rem;
+    width: 4rem;
   }
 
   .errorStyle input,
   .errorStyle select {
-    width: 5rem;
+    width: 4rem;
   }
 
   .inputBox select,
   .errorStyle select {
-    width: 6rem;
+    width: 7rem;
   }
 
   .inputBox label,
   .errorStyle label {
     font-size: 1.1rem;
+  }
+
+  .year {
+    left: -3rem;
+    top: 0rem;
+  }
+}
+
+@media all and (max-width: 352px) {
+  .year {
+    top: -2rem;
+    left: 0.3rem;
   }
 }
 

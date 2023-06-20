@@ -70,6 +70,18 @@ body {
   }
 }
 
+@media all and (max-height: 929px) {
+  .App {
+    height: 70vh;
+  }
+}
+
+@media all and (max-height: 800px) {
+  .App {
+    height: 75vh;
+  }
+}
+
 @media all and (max-height: 800px) {
   .App {
     height: 75vh;

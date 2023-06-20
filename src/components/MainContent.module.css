@@ -15,6 +15,10 @@
   justify-content: center;
 }
 
+.mrgbtn {
+  padding-top: 7%;
+}
+
 .buttBack,
 .buttBackINVIS {
   font-size: 2rem;
@@ -56,6 +60,10 @@
   font-weight: 100;
 }
 
+.btnGradOFF {
+  opacity: 0.7;
+}
+
 .btnGradReg {
   text-shadow: -1px -1px 0 #43b14f, 1px -1px 0 #43b14f, -1px 1px 0 #43b14f,
     1px 1px 0 #43b14f;
@@ -76,8 +84,10 @@
 }
 
 .newError {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 2px;
 }
 
 @media all and (max-width: 1492px) {
@@ -135,4 +145,5 @@
 .h3 {
   text-align: center;
   font-size: 1.4rem;
+  margin-bottom: 9%;
 }
