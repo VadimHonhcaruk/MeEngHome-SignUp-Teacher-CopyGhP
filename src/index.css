@@ -22,5 +22,11 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-background-color: white !important;
+}
+
+input:auto-fill,
+input:auto-fill:hover,
+input:auto-fill:focus,
+input:auto-fill:active {
   background-color: white !important;
 }

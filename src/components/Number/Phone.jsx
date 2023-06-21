@@ -11,7 +11,7 @@ export const Phone = ({ isMobile, phone, setPhone, register, errors, clearErrors
     useEffect(() => {
         const queryParams = new URLSearchParams(window.location.search);
         let x = queryParams.get("phoneNumber");
-        setQueryPhoneWithout('+' + x.slice(1));
+        if (x) setQueryPhoneWithout('+' + x.slice(1));
         if (x) x = x.replace(/^./, '+');
         const regex = /^\+380\d{9}$/;
         if (x && regex.test(x)) {
