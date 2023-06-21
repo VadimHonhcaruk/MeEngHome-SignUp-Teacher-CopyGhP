@@ -21,12 +21,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-background-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-input:auto-fill,
-input:auto-fill:hover,
-input:auto-fill:focus,
-input:auto-fill:active {
-  background-color: white !important;
+input:auto-fill {
+  transition: background-color 5000s ease-in-out 0s;
 }
