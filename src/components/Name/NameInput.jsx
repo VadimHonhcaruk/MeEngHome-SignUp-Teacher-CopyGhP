@@ -23,11 +23,11 @@ export const NameInput = ({ isMobile, firstName, setFirstName, setSecondName, se
             <>
                 <div className={c.center}>
                     <div className={errors?.firstName ? m.errorStyleMobile : m.inputBoxMobile}>
-                        <input id="firstName" value={firstName} {...register('firstName', { onChange: (e) => { setFirstName(e.target.value); onChangeInputName(watch('firstName'), setError, clearErrors, 'firstName') }, required: { value: true, message: "Заповніть поле" }, maxLength: 30, pattern: { value: /^(?!.*(?:['-]){2,})(?!['-])(?!.*(?:['-]$))(?:[А-Яа-яЁёІіЇїЄє']+['-]?)*[А-Яа-яЁёІіЇїЄє']+$/, message: "Поле може містити тільки літери, апостроф та тире" }, })} type="text" maxLength="30" />
+                        <input id="firstName" value={firstName} {...register('firstName', { onChange: (e) => { setFirstName(e.target.value.trim()); onChangeInputName(watch('firstName'), setError, clearErrors, 'firstName'); }, required: { value: true, message: "Заповніть поле" }, maxLength: 30, pattern: { value: /^(?!.*(?:['-]){2,})(?!['-])(?!.*(?:['-]$))(?:[А-Яа-яЁёІіЇїЄє']+['-]?)*[А-Яа-яЁёІіЇїЄє']+$/, message: "Поле може містити тільки літери, апостроф та тире" }, })} type="text" maxLength="30" />
                         <label htmlFor="firstName" className={m.fin} id={firstName !== '' ? m.fillMobile : undefined} >Ім'я</label>
                     </div>
                     <div id={c.ma} className={errors?.secondName ? m.errorStyleMobile : m.inputBoxMobile}>
-                        <input id="secondName" value={secondName} {...register('secondName', { onChange: (e) => { setSecondName(e.target.value); onChangeInputName(watch('secondName'), setError, clearErrors, 'secondName') }, required: { value: true, message: " Заповніть поле" }, maxLength: 30, pattern: { value: /^(?!.*(?:['-]){2,})(?!['-])(?!.*(?:['-]$))(?:[А-Яа-яЁёІіЇїЄє']+['-]?)*[А-Яа-яЁёІіЇїЄє']+$/, message: " Поле може містити тільки літери, апостроф та тире" }, })} type="text" maxLength="30" />
+                        <input id="secondName" value={secondName} {...register('secondName', { onChange: (e) => { setSecondName(e.target.value.trim()); onChangeInputName(watch('secondName'), setError, clearErrors, 'secondName') }, required: { value: true, message: " Заповніть поле" }, maxLength: 30, pattern: { value: /^(?!.*(?:['-]){2,})(?!['-])(?!.*(?:['-]$))(?:[А-Яа-яЁёІіЇїЄє']+['-]?)*[А-Яа-яЁёІіЇїЄє']+$/, message: " Поле може містити тільки літери, апостроф та тире" }, })} type="text" maxLength="30" />
                         <label htmlFor="secondName" className={m.fin} id={secondName !== '' ? m.fillMobile : undefined} >Прізвище</label>
                     </div>
                 </div>
