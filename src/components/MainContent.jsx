@@ -141,19 +141,10 @@ export const MainContent = ({ isMobile }) => {
                     <ImageRight page={page} />
                 </div>
                 {page === 1 ? <div className={c.buttCont}>
-                    <button className={!canClick || ageUnderEi || errors?.firstName || errors?.secondName || errors?.day || errors?.month || errors?.year || errors?.phone || errors?.card || !isValideDate || watch('firstName') === '' || watch('secondName') === '' || watch('day') === '' || watch('month') === '' || watch('year') === '' || phone === '' || errorCard ? c.btnGrad + ' ' + c.btnGradOFF : c.btnGrad} onClick={!canClick || ageUnderEi || errors?.firstName || errors?.secondName || errors?.day || errors?.month || errors?.year || errors?.phone || errors?.card || !isValideDate || watch('firstName') === '' || watch('secondName') === '' || watch('day') === '' || watch('month') === '' || watch('year') === '' || phone === '' || errorCard ? null : () => setPage(2)}>Далі</button>
-                    {/* onClick={validCont} */}
+                    <button className={!canClick || ageUnderEi || errors?.firstName || errors?.secondName || errors?.day || errors?.month || errors?.year || errors?.phone || errors?.card || !isValideDate || watch('firstName') === '' || watch('secondName') === '' || watch('day') === '' || watch('month') === '' || watch('year') === '' || phone === '' || errorCard ? c.btnGrad + ' ' + c.btnGradOFF : c.btnGrad} onClick={validCont}>Далі</button>
                 </div> : <div className={c.buttContReg}>
                     <div className={c.buttBack} onClick={() => setPage(1)}>Назад</div>
-                    <button className={errors?.email || errors?.password || password !== passwordCheck || !watch('behavior') || !watch('contract') ? c.btnGrad + ' ' + c.btnGradOFF + ' ' + c.btnGradReg : c.btnGrad + ' ' + c.btnGradReg + ' ' + c.btnActive} onClick={errors?.email || errors?.password || password !== passwordCheck || !watch('behavior') || !watch('contract') ? null : () => {
-                        setIsSuccess(true);
-                        setIsModalVisible(true);
-                        setTimeout(() => setIsModalVisible(false), 8000);
-                        setTimeout(() => {
-                            window.location.href = 'https://www.facebook.com/MyEnglishHomeBoryspil';
-                        }, 5000);
-                    }}>Зареєструватись</button>
-                    {/* onClick={errors?.email || errors?.password || password !== passwordCheck || !watch('behavior') || !watch('contract') ? null : registerFunc} */}
+                    <button className={errors?.email || errors?.password || password !== passwordCheck || !watch('behavior') || !watch('contract') ? c.btnGrad + ' ' + c.btnGradOFF + ' ' + c.btnGradReg : c.btnGrad + ' ' + c.btnGradReg + ' ' + c.btnActive} onClick={errors?.email || errors?.password || password !== passwordCheck || !watch('behavior') || !watch('contract') ? null : registerFunc}>Зареєструватись</button>
                     <div></div>
                 </div>}
             </div> :
@@ -174,14 +165,14 @@ export const MainContent = ({ isMobile }) => {
                         <div></div>
                     </div>}
                     {pageMobile === 4 && <div className={c.buttContReg}>
-                        <div className={c.buttCont + ' ' + c.mrgbtn}><div className={c.buttBack} onClick={() => setPageMobile(3)}>Назад</div><button className={!watch('behavior') || !watch('contract') ? c.btnGrad + ' ' + c.btnGradOFF : c.btnGrad} onClick={!watch('behavior') || !watch('contract') ? null : () => {
+                        <div className={c.buttCont + ' ' + c.mrgbtn}><div className={c.buttBack} onClick={!watch('behavior') || !watch('contract') ? null : registerFunc}>Назад</div><button className={!watch('behavior') || !watch('contract') ? c.btnGrad + ' ' + c.btnGradOFF : c.btnGrad} onClick={!watch('behavior') || !watch('contract') ? null : () => {
                             setIsSuccess(true);
                             setIsModalVisible(true);
                             setTimeout(() => setIsModalVisible(false), 8000);
                             setTimeout(() => {
                                 window.location.href = 'https://www.facebook.com/MyEnglishHomeBoryspil';
                             }, 5000);
-                        }}>Далі</button></div>{/*onClick={!watch('behavior') || !watch('contract') ? null : registerFunc}*/}
+                        }}>Далі</button></div>
                         <div></div>
                     </div>}
                 </div>
